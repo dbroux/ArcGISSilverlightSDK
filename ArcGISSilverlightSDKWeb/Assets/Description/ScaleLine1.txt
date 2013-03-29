@@ -1,0 +1,2 @@
+This sample shows how to associate a ScaleLine control with a map.  Element binding is used to bind the ScaleLine and other elements to the map and its contents in XAML.
+The scale line is customized to display multiple values on the line.

@@ -1,0 +1,7 @@
+﻿This sample demonstrates how to reorganize the hierarchy of layer items in the Legend control.
+
+The use case is a map with several layers grouped together from one dynamic map service layer and one feature layer from the same map service (for using MapTip).
+Without customization, the symbology of the feature layer shows up twice in the legend, once as feature layer at the root of the legend, once as sublayer of the dynamic map service.
+The sample shows how the root feature layer item (Water Mains - Block View) can replace the sublayer in the dynamic map service layer items (with the possibility of changing the opacity of the feature layer).
+
+.

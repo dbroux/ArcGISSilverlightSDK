@@ -1,0 +1,244 @@
+﻿<UserControl x:Class="ArcGISSilverlightSDK.AutoTimeSliderSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+             xmlns:local="clr-namespace:ArcGISSilverlightSDK"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:esriToolkitPrimitives="clr-namespace:ESRI.ArcGIS.Client.Toolkit.Primitives;assembly=ESRI.ArcGIS.Client.Toolkit"
+             mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Resources>
+            <!--  Define the Legend implicit style that will be used in this page  -->
+            <Style TargetType="esri:Legend">
+                <Setter Property="LayerItemsMode" Value="Tree" />
+                <Setter Property="ShowOnlyVisibleLayers" Value="False" />
+
+                <Setter Property="MapLayerTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <StackPanel d:DataContext="{d:DesignInstance esriToolkitPrimitives:LayerItemViewModel}">
+                                <StackPanel.Resources>
+                                    <DataTemplate x:Key="BusyIndicatorTemplate">
+                                        <Grid x:Name="BusyIndicator" Margin="3,0"
+                                              HorizontalAlignment="Left" VerticalAlignment="Center"
+                                              Background="Transparent" RenderTransformOrigin="0.5,0.5">
+                                            <Grid.Triggers>
+                                                <EventTrigger RoutedEvent="Grid.Loaded">
+                                                    <EventTrigger.Actions>
+                                                        <BeginStoryboard>
+                                                            <Storyboard>
+                                                                <DoubleAnimation Duration="0:0:1" RepeatBehavior="Forever"
+                                                                                 Storyboard.TargetName="BusyIndicator"
+                                                                                 Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)"
+                                                                                 To="360" />
+                                                            </Storyboard>
+                                                        </BeginStoryboard>
+                                                    </EventTrigger.Actions>
+                                                </EventTrigger>
+                                            </Grid.Triggers>
+
+                                            <Grid.RenderTransform>
+                                                <RotateTransform />
+                                            </Grid.RenderTransform>
+                                            <Ellipse Width="2" Height="2"
+                                                     Margin="11,2,11,20" Fill="#1E525252" />
+                                            <Ellipse Width="3" Height="3"
+                                                     Margin="0,4,5,0" HorizontalAlignment="Right"
+                                                     VerticalAlignment="Top" Fill="#3F525252" />
+                                            <Ellipse Width="4" Height="4"
+                                                     Margin="0,9,1,0" HorizontalAlignment="Right"
+                                                     VerticalAlignment="Top" Fill="#7F525252" />
+                                            <Ellipse Width="5" Height="5"
+                                                     Margin="0,0,3,3" HorizontalAlignment="Right"
+                                                     VerticalAlignment="Bottom" Fill="#BF525252" />
+                                            <Ellipse Width="6" Height="6"
+                                                     Margin="9,0" VerticalAlignment="Bottom"
+                                                     Fill="#FF525252" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </StackPanel.Resources>
+
+                                <ToolTipService.ToolTip>
+                                    <StackPanel MaxWidth="450">
+                                        <TextBlock FontWeight="Bold" Text="{Binding Layer.CopyrightText}" TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding Layer.Url, StringFormat='Url : {0}'}" />
+                                        <TextBlock Text="{Binding MinimumResolution, StringFormat='Minimum Resolution : {0:F6}'}" />
+                                        <TextBlock Text="{Binding MaximumResolution, StringFormat='Maximum Resolution : {0:F6}'}" />
+                                    </StackPanel>
+                                </ToolTipService.ToolTip>
+
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Grid VerticalAlignment="Center">
+                                        <CheckBox IsChecked="{Binding IsEnabled, Mode=TwoWay}" />
+                                        <CheckBox IsChecked="{Binding IsEnabled}" IsEnabled="{Binding IsVisible}" IsHitTestVisible="False" />
+                                    </Grid>
+                                    <ContentControl VerticalAlignment="Center" ContentTemplate="{StaticResource BusyIndicatorTemplate}" Visibility="{Binding BusyIndicatorVisibility}" />
+                                    <Slider Width="30" VerticalAlignment="Center"
+                                            Maximum="1" Minimum="0"
+                                            Value="{Binding Layer.Opacity,
+                                                            Mode=TwoWay}" />
+                                    <TextBlock VerticalAlignment="Center" FontWeight="Bold" Text="{Binding Label}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+
+                <Setter Property="LayerTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" d:DataContext="{d:DesignInstance esriToolkitPrimitives:LayerItemViewModel}">
+                                <ToolTipService.ToolTip>
+                                    <StackPanel MaxWidth="400">
+                                        <TextBlock FontWeight="Bold" Text="{Binding Layer.ID}" TextWrapping="Wrap" />
+                                        <TextBlock FontWeight="Bold" Text="{Binding Label}" TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding SubLayerID, StringFormat='SubLayer ID : {0}'}" />
+                                        <TextBlock Text="{Binding MinimumResolution, StringFormat='Minimum Resolution : {0:F6}'}" />
+                                        <TextBlock Text="{Binding MaximumResolution, StringFormat='Maximum Resolution : {0:F6}'}" />
+                                    </StackPanel>
+                                </ToolTipService.ToolTip>
+
+                                <Grid>
+                                    <CheckBox VerticalAlignment="Center" Content="{Binding Label}" IsChecked="{Binding IsEnabled, Mode=TwoWay}" />
+                                    <CheckBox VerticalAlignment="Center"
+                                              Content="{Binding Label}"
+                                              IsChecked="{Binding IsEnabled}"
+                                              IsEnabled="{Binding IsVisible}"
+                                              IsHitTestVisible="False" />
+                                </Grid>
+                            </StackPanel>
+
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
+        <!--  Map  -->
+        <esri:Map x:Name="MyMap" WrapAround="True">
+            <esri:ArcGISTiledMapServiceLayer ID="Topo" Opacity="0.6"
+                                             ShowLegend="False"
+                                             Url="http://services.arcgisonline.com/ArcGIS/rest/services/NGS_Topo_US_2D/MapServer" />
+
+            <esri:FeatureLayer ID="EarthquakesLayer (Feature Layer)" Url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Earthquakes/Since_1970/MapServer/0">
+                <esri:FeatureLayer.MapTip>
+                    <Border Margin="0,0,15,15" BorderBrush="#FF222957"
+                            BorderThickness="3" CornerRadius="10">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0.015,0.188" EndPoint="1.038,1.136">
+                                <GradientStop Color="#FFD1DFF2" />
+                                <GradientStop Offset="0.946" Color="#FF0088FF" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="14" Direction="300" ShadowDepth="10" />
+                        </Border.Effect>
+                        <StackPanel Margin="7">
+                            <TextBlock FontWeight="Bold" Foreground="Black" Text="{Binding [Name]}" />
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Foreground="Black" Text="Date: " />
+                                    <TextBlock Foreground="Black" Text="{Binding [Date_]}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Foreground="Black" Text="Magnitude: " />
+                                    <TextBlock Foreground="Black" Text="{Binding [Magnitude]}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </esri:FeatureLayer.MapTip>
+            </esri:FeatureLayer>
+
+            <esri:ArcGISDynamicMapServiceLayer ID="HurricaneLayer (Map Server)" Url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Hurricanes/NOAA_Tracks_1851_2007/MapServer" Visible="False" />
+
+            <esri:KmlLayer ID="Katrina (KML Layer)"
+                           ProxyUrl="http://servicesbeta3.esri.com/SilverlightDemos/ProxyPage/proxy.ashx"
+                           Url="http://services.google.com/earth/kmz/hurricane_katrina.kmz"
+                           Visible="False" />
+
+            <esri:ArcGISImageServiceLayer ID="Blue Marble Imagery (ImageServer)" Url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/World/MODIS/ImageServer" Visible="False">
+                <esri:ArcGISImageServiceLayer.MosaicRule>
+                    <esri:MosaicRule MosaicMethod="esriMosaicCenter" />
+                </esri:ArcGISImageServiceLayer.MosaicRule>
+            </esri:ArcGISImageServiceLayer>
+        </esri:Map>
+
+        <!--  Time Slider  -->
+        <Grid Margin="50,10,50,10" HorizontalAlignment="Center"
+              VerticalAlignment="Bottom"
+              Visibility="{Binding ElementName=MyTimeSlider,
+                                   Path=Visibility}">
+            <Grid.Resources>
+                <local:PlaySpeedLogConverter x:Key="PlaySpeedLogConverter" />
+            </Grid.Resources>
+            <Rectangle Margin="0,0,0,5" Fill="#77919191"
+                       RadiusX="10" RadiusY="10"
+                       Stroke="Gray">
+                <Rectangle.Effect>
+                    <DropShadowEffect />
+                </Rectangle.Effect>
+            </Rectangle>
+            <Border Margin="10,10,10,15" HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Background="#FFFFFFFF"
+                    BorderBrush="DarkGray" CornerRadius="5">
+                <StackPanel Margin="5">
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock HorizontalAlignment="Center" FontSize="14" Text="Time Slider : " />
+                        <ComboBox x:Name="CmbTimeMode" SelectedIndex="0" SelectedValuePath="Tag">
+                            <ComboBox.Items>
+                                <ComboBoxItem Content="Time Extent Mode" Tag="TimeExtent" />
+                                <ComboBoxItem Content="Time Instant Mode" Tag="TimeInstant" />
+                                <ComboBoxItem Content="Cumulative From Start" Tag="CumulativeFromStart" />
+                            </ComboBox.Items>
+                        </ComboBox>
+                        <TextBlock VerticalAlignment="Center" FontSize="14" Text="   Loop " />
+                        <CheckBox x:Name="ChkLoop" VerticalAlignment="Center" IsChecked="True" />
+                        <TextBlock VerticalAlignment="Center" FontSize="14" Text="    Speed " />
+                        <Slider x:Name="SliderPlaySpeed" Width="60"
+                                VerticalAlignment="Center" Maximum="10"
+                                Minimum="-5" SmallChange="1"
+                                ToolTipService.ToolTip="{Binding ElementName=MyTimeSlider,
+                                                                 Path=PlaySpeed,
+                                                                 StringFormat='Time Slider Speed \{0:hh\\:mm\\:ss\\.ff}'}"
+                                Value="0" />
+                    </StackPanel>
+
+                    <Grid>
+                        <TextBlock HorizontalAlignment="Left" Text="{Binding ElementName=MyTimeSlider, Path=FormattedMinimumValue, Mode=OneWay}" />
+                        <TextBlock HorizontalAlignment="Center" Text="{Binding ElementName=MyTimeSlider, Path=FormattedExtent, Mode=OneWay}" />
+                        <TextBlock HorizontalAlignment="Right" Text="{Binding ElementName=MyTimeSlider, Path=FormattedMaximumValue, Mode=OneWay}" />
+                    </Grid>
+
+                    <local:AutoTimeSlider x:Name="MyTimeSlider" Height="20"
+                                          MaxWidth="800"
+                                          Loop="{Binding ElementName=ChkLoop,
+                                                         Path=IsChecked,
+                                                         Mode=TwoWay}"
+                                          Map="{Binding ElementName=MyMap}"
+                                          PlaySpeed="{Binding ElementName=SliderPlaySpeed,
+                                                              Path=Value,
+                                                              Converter={StaticResource PlaySpeedLogConverter},
+                                                              Mode=TwoWay}"
+                                          TimeMode="{Binding ElementName=CmbTimeMode,
+                                                             Path=SelectedValue}"
+                                          Visibility="Collapsed" />
+                </StackPanel>
+            </Border>
+        </Grid>
+
+
+        <!--  Legend  -->
+        <Border Margin="20" HorizontalAlignment="Right"
+                VerticalAlignment="Top" Background="#77919191"
+                BorderBrush="Black" BorderThickness="1"
+                CornerRadius="5" Padding="5">
+            <esri:Legend x:Name="MyLegend" Map="{Binding ElementName=MyMap}" />
+        </Border>
+
+    </Grid>
+</UserControl>

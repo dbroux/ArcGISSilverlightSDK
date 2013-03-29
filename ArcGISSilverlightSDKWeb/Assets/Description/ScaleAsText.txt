@@ -1,0 +1,5 @@
+This sample shows how to create a control displaying the scale as text (something like 1cm = 10 km).
+The input unit can be configured (cm, mm and in make most sense).
+It would be possible to display such infos just by using Map.Scale but subclassing the ScaleLine control has 2 advantages:
+  - the scale is calculated from the current extent (while Map.Scale is calculated at equator)
+  - the output units changes depending on the scale (km/m or mi/ft).

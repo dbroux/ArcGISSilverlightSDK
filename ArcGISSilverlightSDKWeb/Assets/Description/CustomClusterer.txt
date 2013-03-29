@@ -1,0 +1,3 @@
+This sample demonstrates implementing a custom flare clusterer.
+The custom clusterer subclasses GraphicsClusterer and overrides OnCreateGraphics that allows to set the symbols depending on the number of graphics in the cluster.
+The sample shows how to make working the maptips when hovering the flare out symbols (by using the attached property Clusterer.ClusterChildElements).

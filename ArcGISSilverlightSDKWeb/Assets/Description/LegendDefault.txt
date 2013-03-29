@@ -1,0 +1,4 @@
+﻿This sample demonstrates the default behavior of the Legend control.
+The specific Layers that are displayed in the Legend control are controlled by what is specified in the LayersIDs Property.
+By default only visible layers are displayed (controlled by the ShowOnlyVisibleLayers property) and only the last level of layers is displayed (controlled by LayerItemsMode).
+Setting LayerItemMode to Tree results in displaying layers in an hierarchical tree.

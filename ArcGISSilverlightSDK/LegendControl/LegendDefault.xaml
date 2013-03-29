@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="ArcGISSilverlightSDK.LegendDefault"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:esri="http://schemas.esri.com/arcgis/client/2009">
+    <Grid x:Name="LayoutRoot" >
+
+        <!-- Map -->
+        <esri:Map x:Name="MyMap" WrapAround="True" MinimumResolution="0.2">
+            <esri:ArcGISTiledMapServiceLayer ID="Street Map" Opacity="0.6"
+                                             Url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>
+            <esri:ArcGISDynamicMapServiceLayer ID="Water Network"
+                                               Url="http://sampleserver6.arcgisonline.com/arcgis/rest/services/Water_Network/MapServer" Initialized="ZoomToFullExtent"/>
+        </esri:Map>
+
+        <!-- Legend-->
+        <Border Background="#77919191" BorderThickness="1" CornerRadius="5"
+                HorizontalAlignment="Right"  VerticalAlignment="Top"
+                Margin="20" Padding="5" BorderBrush="Black" >
+            <esri:Legend x:Name="MyLegend" Map="{Binding ElementName=MyMap}" LayerIDs="Water Network"
+                         ShowOnlyVisibleLayers="{Binding ElementName=ChkShowOnlyVisibleLayers, Path=IsChecked}" 
+                         LayerItemsMode="{Binding ElementName=CmbLayerItemsMode, Path=SelectedValue}"/>
+        </Border>
+        
+        <!-- Legend Options-->
+        <Border Background="#77919191" BorderThickness="1" CornerRadius="5"
+                HorizontalAlignment="Left"  VerticalAlignment="Top"
+                Margin="20" Padding="5" BorderBrush="Black" >
+            <StackPanel>
+                <CheckBox x:Name="ChkShowOnlyVisibleLayers" Content="ShowOnlyVisibleLayers" IsChecked="True" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="LayerItemsMode : " />
+                    <ComboBox x:Name="CmbLayerItemsMode" SelectedValuePath="Content">
+                        <ComboBoxItem Content="Flat" IsSelected="True"/>
+                        <ComboBoxItem Content="Tree"/>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

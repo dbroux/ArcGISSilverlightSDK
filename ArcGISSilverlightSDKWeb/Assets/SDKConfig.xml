@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArcGISSilverlightSDK>
+  <Category>
+    <name>Graphics</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Pie Chart Rendering</id>
+        <xaml>ArcGISSilverlightSDK.PieChartRendering</xaml>
+        <source>Assets/Source/PieChartRendering.xaml</source>
+        <code>Assets/Source/PieChartRendering.xaml.cs.txt</code>
+        <codevb>Assets/Source/PieChartRendering.xaml.vb.txt</codevb>
+        <desc>Assets/Description/PieChartRendering.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>PieChart,Symbol,Rendering</keywords>
+      </item>
+      <item>
+        <id>Column Chart Rendering</id>
+        <xaml>ArcGISSilverlightSDK.ColumnChartRendering</xaml>
+        <source>Assets/Source/ColumnChartRendering.xaml</source>
+        <code>Assets/Source/ColumnChartRendering.xaml.cs.txt</code>
+        <codevb>Assets/Source/ColumnChartRendering.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ColumnChartRendering.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ColumnChart,Symbol,Rendering</keywords>
+      </item>
+      <item>
+        <id>Custom Flare Clusterer</id>
+        <xaml>ArcGISSilverlightSDK.CustomClusterer</xaml>
+        <source>Assets/Source/CustomClusterer.xaml</source>
+        <code>Assets/Source/CustomClusterer.xaml.cs.txt</code>
+        <codevb>Assets/Source/CustomClusterer.xaml.vb.txt</codevb>
+        <desc>Assets/Description/CustomClusterer.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Symbol,Cluster,Rendering,ClusterChildElements</keywords>
+      </item>
+      <item>
+        <id>Pie Chart Maptips</id>
+        <xaml>ArcGISSilverlightSDK.PieChartMaptips</xaml>
+        <source>Assets/Source/PieChartMaptips.xaml</source>
+        <code>Assets/Source/PieChartMaptips.xaml.cs.txt</code>
+        <codevb>Assets/Source/PieChartMaptips.xaml.vb.txt</codevb>
+        <desc>Assets/Description/PieChartMaptips.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>PieChart,Symbol,Rendering</keywords>
+      </item>
+      <item>
+        <id>Pan With Animation</id>
+        <xaml>ArcGISSilverlightSDK.PanWithAnimation</xaml>
+        <source>Assets/Source/PanWithAnimation.xaml</source>
+        <code>Assets/Source/PanWithAnimation.xaml.cs.txt</code>
+        <codevb>Assets/Source/PanWithAnimation.xaml.vb.txt</codevb>
+        <desc>Assets/Description/PanWithAnimation.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Pan,Animation</keywords>
+      </item>
+      <item>
+        <id>Map Monochrome Effect</id>
+        <xaml>ArcGISSilverlightSDK.PixelShaderEffect</xaml>
+        <source>Assets/Source/PixelShaderEffect.xaml</source>
+        <code>Assets/Source/PixelShaderEffect.xaml.cs.txt</code>
+        <codevb>Assets/Source/PixelShaderEffect.xaml.vb.txt</codevb>
+        <desc>Assets/Description/PixelShaderEffect.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>PixelShader,Monochrome</keywords>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Scale Line</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Scale Line Default</id>
+        <xaml>ArcGISSilverlightSDK.ScalelineSimple</xaml>
+        <source>Assets/Source/ScalelineSimple.xaml</source>
+        <code>Assets/Source/ScalelineSimple.xaml.cs.txt</code>
+        <codevb>Assets/Source/ScalelineSimple.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ScalelineSimple.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+      <item>
+        <id>Scale Line Style1</id>
+        <xaml>ArcGISSilverlightSDK.ScaleLine1</xaml>
+        <source>Assets/Source/ScaleLine1.xaml</source>
+        <code>Assets/Source/ScaleLine1.xaml.cs.txt</code>
+        <codevb>Assets/Source/ScaleLine1.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ScaleLine1.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+      <item>
+        <id>Scale Line Style2</id>
+        <xaml>ArcGISSilverlightSDK.ScaleLine2</xaml>
+        <source>Assets/Source/ScaleLine2.xaml</source>
+        <code>Assets/Source/ScaleLine2.xaml.cs.txt</code>
+        <codevb>Assets/Source/ScaleLine2.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ScaleLine2.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+      <item>
+        <id>Scale Line Style3</id>
+        <xaml>ArcGISSilverlightSDK.ScaleLine3</xaml>
+        <source>Assets/Source/ScaleLine3.xaml</source>
+        <code>Assets/Source/ScaleLine3.xaml.cs.txt</code>
+        <codevb>Assets/Source/ScaleLine3.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ScaleLine3.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+      <item>
+        <id>Stepped Scale Line</id>
+        <xaml>ArcGISSilverlightSDK.SteppedScaleLine</xaml>
+        <source>Assets/Source/SteppedScaleLine.xaml</source>
+        <code>Assets/Source/SteppedScaleLine.xaml.cs.txt</code>
+        <codevb>Assets/Source/SteppedScaleLine.xaml.vb.txt</codevb>
+        <desc>Assets/Description/SteppedScaleLine.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+      <item>
+        <id>Scale Bar</id>
+        <xaml>ArcGISSilverlightSDK.Scalebar</xaml>
+        <source>Assets/Source/Scalebar.xaml</source>
+        <code>Assets/Source/Scalebar.xaml.cs.txt</code>
+        <codevb>Assets/Source/Scalebar.xaml.vb.txt</codevb>
+        <desc>Assets/Description/Scalebar.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+      <item>
+        <id>Double Scale Bar</id>
+        <xaml>ArcGISSilverlightSDK.DoubleScalebar</xaml>
+        <source>Assets/Source/DoubleScalebar.xaml</source>
+        <code>Assets/Source/DoubleScalebar.xaml.cs.txt</code>
+        <codevb>Assets/Source/DoubleScalebar.xaml.vb.txt</codevb>
+        <desc>Assets/Description/DoubleScalebar.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+      <item>
+        <id>Scale As Text</id>
+        <xaml>ArcGISSilverlightSDK.ScaleAsText</xaml>
+        <source>Assets/Source/ScaleAsText.xaml</source>
+        <code>Assets/Source/ScaleAsText.xaml.cs.txt</code>
+        <codevb>Assets/Source/ScaleAsText.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ScaleAsText.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+      <item>
+        <id>Scale Line Localized</id>
+        <xaml>ArcGISSilverlightSDK.ScaleLineLocalized</xaml>
+        <source>Assets/Source/ScaleLineLocalized.xaml</source>
+        <code>Assets/Source/ScaleLineLocalized.xaml.cs.txt</code>
+        <codevb>Assets/Source/ScaleLineLocalized.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ScaleLineLocalized.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>ScaleLine</keywords>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Legend</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Legend Default</id>
+        <xaml>ArcGISSilverlightSDK.LegendDefault</xaml>
+        <source>Assets/Source/LegendDefault.xaml</source>
+        <code>Assets/Source/LegendDefault.xaml.cs.txt</code>
+        <codevb>Assets/Source/LegendDefault.xaml.vb.txt</codevb>
+        <desc>Assets/Description/LegendDefault.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Legend,Templates</keywords>
+      </item>
+      <item>
+        <id>Table Of Content</id>
+        <xaml>ArcGISSilverlightSDK.LegendTOC</xaml>
+        <source>Assets/Source/LegendTOC.xaml</source>
+        <code>Assets/Source/LegendTOC.xaml.cs.txt</code>
+        <codevb>Assets/Source/LegendTOC.xaml.vb.txt</codevb>
+        <desc>Assets/Description/LegendTOC.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Legend,Templates,TOC</keywords>
+      </item>
+      <item>
+        <id>Table Of Content Google Style</id>
+        <xaml>ArcGISSilverlightSDK.LegendTOCGoogleStyle</xaml>
+        <source>Assets/Source/LegendTOCGoogleStyle.xaml</source>
+        <code>Assets/Source/LegendTOCGoogleStyle.xaml.cs.txt</code>
+        <codevb>Assets/Source/LegendTOCGoogleStyle.xaml.vb.txt</codevb>
+        <desc>Assets/Description/LegendTOCGoogleStyle.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Legend,Templates,TOC</keywords>
+      </item>
+      <item>
+        <id>SubLayer List</id>
+        <xaml>ArcGISSilverlightSDK.LegendSubLayerList</xaml>
+        <source>Assets/Source/LegendSubLayerList.xaml</source>
+        <code>Assets/Source/LegendSubLayerList.xaml.cs.txt</code>
+        <codevb>Assets/Source/LegendSubLayerList.xaml.vb.txt</codevb>
+        <desc>Assets/Description/LegendSubLayerList.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Legend,Templates</keywords>
+      </item>
+      <item>
+        <id>Accordion Style</id>
+        <xaml>ArcGISSilverlightSDK.LegendAccordion</xaml>
+        <source>Assets/Source/LegendAccordion.xaml</source>
+        <code>Assets/Source/LegendAccordion.xaml.cs.txt</code>
+        <codevb>Assets/Source/LegendAccordion.xaml.vb.txt</codevb>
+        <desc>Assets/Description/LegendAccordion.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Legend,Templates</keywords>
+      </item>
+      <item>
+        <id>WrapPanel Style</id>
+        <xaml>ArcGISSilverlightSDK.LegendWrapPanel</xaml>
+        <source>Assets/Source/LegendWrapPanel.xaml</source>
+        <code>Assets/Source/LegendWrapPanel.xaml.cs.txt</code>
+        <codevb>Assets/Source/LegendWrapPanel.xaml.vb.txt</codevb>
+        <desc>Assets/Description/LegendWrapPanel.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Legend,Templates</keywords>
+      </item>
+      <item>
+        <id>Reorganize Legend</id>
+        <xaml>ArcGISSilverlightSDK.LegendReorganize</xaml>
+        <source>Assets/Source/LegendReorganize.xaml</source>
+        <code>Assets/Source/LegendReorganize.xaml.cs.txt</code>
+        <codevb>Assets/Source/LegendReorganize.xaml.vb.txt</codevb>
+        <desc>Assets/Description/LegendReorganize.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Legend,Templates</keywords>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Time Slider</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Auto Time Slider</id>
+        <xaml>ArcGISSilverlightSDK.AutoTimeSliderSample</xaml>
+        <source>Assets/Source/AutoTimeSliderSample.xaml</source>
+        <code>Assets/Source/AutoTimeSliderSample.xaml.cs.txt</code>
+        <codevb>Assets/Source/AutoTimeSliderSample.xaml.vb.txt</codevb>
+        <desc>Assets/Description/AutoTimeSliderSample.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>TimeSlider</keywords>
+      </item>
+     </items>
+  </Category>
+  <Category>
+    <name>Navigation</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Navigation Default</id>
+        <xaml>ArcGISSilverlightSDK.Navigation</xaml>
+        <source>Assets/Source/Navigation.xaml</source>
+        <code>Assets/Source/Navigation.xaml.cs.txt</code>
+        <codevb>Assets/Source/Navigation.xaml.vb.txt</codevb>
+        <desc>Assets/Description/Navigation.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Navigation</keywords>
+      </item>
+      <item>
+        <id>Navigation Standard Template</id>
+        <xaml>ArcGISSilverlightSDK.NavigationStandardTemplate</xaml>
+        <source>Assets/Source/NavigationStandardTemplate.xaml</source>
+        <code>Assets/Source/NavigationStandardTemplate.xaml.cs.txt</code>
+        <codevb>Assets/Source/NavigationStandardTemplate.xaml.vb.txt</codevb>
+        <desc>Assets/Description/NavigationStandardTemplate.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Navigation</keywords>
+      </item>
+      <item>
+        <id>Navigation Showcase Template</id>
+        <xaml>ArcGISSilverlightSDK.NavigationShowcaseTemplate</xaml>
+        <source>Assets/Source/NavigationShowcaseTemplate.xaml</source>
+        <code>Assets/Source/NavigationShowcaseTemplate.xaml.cs.txt</code>
+        <codevb>Assets/Source/NavigationShowcaseTemplate.xaml.vb.txt</codevb>
+        <desc>Assets/Description/NavigationShowcaseTemplate.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Navigation</keywords>
+      </item>
+    </items>
+  </Category>
+  <Category>
+    <name>Geometry Utilities</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Geometric Projection</id>
+        <xaml>ArcGISSilverlightSDK.GeometricProjection</xaml>
+        <source>Assets/Source/GeometricProjection.xaml</source>
+        <code>Assets/Source/GeometricProjection.xaml.cs.txt</code>
+        <codevb>Assets/Source/GeometricProjection.xaml.vb.txt</codevb>
+        <desc>Assets/Description/GeometricProjection.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Geometry,Projection</keywords>
+      </item>
+      <item>
+        <id>Proximity Detection</id>
+        <xaml>ArcGISSilverlightSDK.ProximityDetection</xaml>
+        <source>Assets/Source/ProximityDetection.xaml</source>
+        <code>Assets/Source/ProximityDetection.xaml.cs.txt</code>
+        <codevb>Assets/Source/ProximityDetection.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ProximityDetection.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Geometry,Proximity,Distance</keywords>
+      </item>
+      <item>
+        <id>Linear Referencing</id>
+        <xaml>ArcGISSilverlightSDK.LinearReferencing</xaml>
+        <source>Assets/Source/LinearReferencing.xaml</source>
+        <code>Assets/Source/LinearReferencing.xaml.cs.txt</code>
+        <codevb>Assets/Source/LinearReferencing.xaml.vb.txt</codevb>
+        <desc>Assets/Description/LinearReferencing.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Geometry,Linear</keywords>
+      </item>
+      <!--<item>
+        <id>Measures</id>
+        <xaml>ArcGISSilverlightSDK.Measure</xaml>
+        <source>Assets/Source/Measure.xaml</source>
+        <code>Assets/Source/Measure.xaml.cs.txt</code>
+        <codevb>Assets/Source/Measure.xaml.vb.txt</codevb>
+        <desc>Assets/Description/Measure.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Geometry,Measure</keywords>
+      </item>-->
+    </items>
+  </Category>
+
+  <Category>
+    <name>Query</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Identify</id>
+        <xaml>ArcGISSilverlightSDK.Identify</xaml>
+        <source>Assets/Source/Identify.xaml</source>
+        <code>Assets/Source/Identify.xaml.cs.txt</code>
+        <codevb>Assets/Source/Identify.xaml.vb.txt</codevb>
+        <desc>Assets/Description/Identify.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Query,Identify</keywords>
+      </item>
+    </items>
+  </Category>
+  
+  <Category>
+    <name>Printing</name>
+    <icon>Assets/images/globe-16x16.png</icon>
+    <items>
+      <item>
+        <id>Print at Client Side</id>
+        <xaml>ArcGISSilverlightSDK.ClientSidePrint</xaml>
+        <source>Assets/Source/ClientSidePrint.xaml</source>
+        <code>Assets/Source/ClientSidePrint.xaml.cs.txt</code>
+        <codevb>Assets/Source/ClientSidePrint.xaml.vb.txt</codevb>
+        <desc>Assets/Description/ClientSidePrint.txt</desc>
+        <icon>Assets/Images/small_bullet.png</icon>
+        <keywords>Geometry,Projection</keywords>
+      </item>
+    </items>
+  </Category>
+</ArcGISSilverlightSDK>

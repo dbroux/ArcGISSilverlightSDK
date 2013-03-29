@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C17D52B1-8A98-4DC2-A3B9-3A601B9A0356}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ArcGISSilverlightSDK</RootNamespace>
+    <AssemblyName>ArcGISSilverlightSDK</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>ArcGISSilverlightSDK.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>ArcGISSilverlightSDK.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>Q:\esriKey.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ExpressionBlendVersion>4.0.20408.0</ExpressionBlendVersion>
+    <Utf8Output>true</Utf8Output>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Graphics\ColumnChartRendering.xaml.cs">
+      <DependentUpon>ColumnChartRendering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\PieChartMaptips.xaml.cs">
+      <DependentUpon>PieChartMaptips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\CustomClusterer.xaml.cs">
+      <DependentUpon>CustomClusterer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\PanWithAnimation.xaml.cs">
+      <DependentUpon>PanWithAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\PixelShaderEffect.xaml.cs">
+      <DependentUpon>PixelShaderEffect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LegendControl\LegendTOCGoogleStyle.xaml.cs">
+      <DependentUpon>LegendTOCGoogleStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LegendControl\LegendReorganize.xaml.cs">
+      <DependentUpon>LegendReorganize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LegendControl\LegendWrapPanel.xaml.cs">
+      <DependentUpon>LegendWrapPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LegendControl\LegendSubLayerList.xaml.cs">
+      <DependentUpon>LegendSubLayerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LegendControl\LegendAccordion.xaml.cs">
+      <DependentUpon>LegendAccordion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\NavigationShowcaseTemplate.xaml.cs">
+      <DependentUpon>NavigationShowcaseTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\NavigationStandardTemplate.xaml.cs">
+      <DependentUpon>NavigationStandardTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ClientSidePrint.xaml.cs">
+      <DependentUpon>ClientSidePrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Query\Identify.xaml.cs">
+      <DependentUpon>Identify.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\ScaleLine3.xaml.cs">
+      <DependentUpon>ScaleLine3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\ScaleAsText.xaml.cs">
+      <DependentUpon>ScaleAsText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\SteppedScaleLine.xaml.cs">
+      <DependentUpon>SteppedScaleLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\ScaleLine1.xaml.cs">
+      <DependentUpon>ScaleLine1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\ScaleLine2.xaml.cs">
+      <DependentUpon>ScaleLine2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\DoubleScalebar.xaml.cs">
+      <DependentUpon>DoubleScalebar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\ScaleLineLocalized.xaml.cs">
+      <DependentUpon>ScaleLineLocalized.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\ScalelineSimple.xaml.cs">
+      <DependentUpon>ScalelineSimple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleLine\Scalebar.xaml.cs">
+      <DependentUpon>Scalebar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeSlider\AutoTimeSliderSample.xaml.cs">
+      <DependentUpon>AutoTimeSliderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Measure.xaml.cs">
+      <DependentUpon>Measure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\MeasureCommands.cs" />
+    <Compile Include="Utilities\ProximityDetection.xaml.cs">
+      <DependentUpon>ProximityDetection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\LinearReferencing.xaml.cs">
+      <DependentUpon>LinearReferencing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\GeometricProjection.xaml.cs">
+      <DependentUpon>GeometricProjection.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Graphics\ColumnChartRendering.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\PieChartMaptips.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\CustomClusterer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\PanWithAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\PixelShaderEffect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LegendControl\LegendTOCGoogleStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LegendControl\LegendReorganize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LegendControl\LegendWrapPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LegendControl\LegendSubLayerList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LegendControl\LegendAccordion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Navigation\NavigationShowcaseTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Navigation\NavigationStandardTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Printing\ClientSidePrint.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Query\Identify.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\ScaleLine3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\ScaleAsText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\SteppedScaleLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\ScaleLine1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\ScaleLine2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\DoubleScalebar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\ScaleLineLocalized.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\ScalelineSimple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScaleLine\Scalebar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TimeSlider\AutoTimeSliderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Utilities\Measure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Utilities\ProximityDetection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Utilities\LinearReferencing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Utilities\GeometricProjection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Reference Include="ESRI.ArcGIS.Client, Version=10.1.1.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ESRI SDKs\Silverlight5\v3.1\ESRI.ArcGIS.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Client.Behaviors, Version=10.1.1.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ESRI SDKs\Silverlight5\v3.1\ESRI.ArcGIS.Client.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Client.Toolkit, Version=10.1.1.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ESRI SDKs\Silverlight5\v3.1\ESRI.ArcGIS.Client.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Client.Toolkit.DataSources, Version=10.1.1.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ESRI SDKs\Silverlight5\v3.1\ESRI.ArcGIS.Client.Toolkit.DataSources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions">
+      <HintPath>..\..\..\..\..\..\..\Applications\depfiles\sharedlibs\ExpressionSDK\Silverlight\v5.0\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxHighlighting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Support\SyntaxHighlighting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Json, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Shared Files\DepFiles\DotNet\SilverlightToolkit\v5.0\System.Windows.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\..\..\..\..\..\..\Applications\depfiles\sharedlibs\ExpressionSDK\Silverlight\v5.0\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Page Include="Graphics\PieChartRendering.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Graphics\PieChartRendering.xaml.cs">
+      <DependentUpon>PieChartRendering.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LightPage.xaml.cs">
+      <DependentUpon>LightPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clipboard.cs" />
+    <Compile Include="LogosFade.xaml.cs">
+      <DependentUpon>LogosFade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LegendControl\LegendDefault.xaml.cs">
+      <DependentUpon>LegendDefault.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LegendControl\LegendTOC.xaml.cs">
+      <DependentUpon>LegendTOC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\Navigation.xaml.cs">
+      <DependentUpon>Navigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SDKObjects.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="LightPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LogosFade.xaml">
+      <SubType>Page</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LegendControl\LegendDefault.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LegendControl\LegendTOC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Navigation\Navigation.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Navigation\Images\blue_globe.png" />
+    <Resource Include="Navigation\Images\collapse.png" />
+    <None Include="Navigation\Images\dismiss.png" />
+    <Resource Include="Navigation\Images\expand.png" />
+    <None Include="Navigation\Images\i_about.png" />
+    <None Include="Navigation\Images\i_clickglobe.png" />
+    <Resource Include="Navigation\Images\i_globe.png" />
+    <None Include="Navigation\Images\i_legend.png" />
+    <None Include="Navigation\Images\i_magnifyglass.png" />
+    <Resource Include="Navigation\Images\i_nav.png" />
+    <None Include="Navigation\Images\i_options.png" />
+    <None Include="Navigation\Images\i_overview.png" />
+    <None Include="Navigation\Images\i_tools.png" />
+    <None Include="Navigation\Images\i_widget.png" />
+    <Resource Include="Navigation\Images\i_zoomin.png" />
+    <Resource Include="Navigation\Images\i_zoomout.png" />
+    <None Include="Navigation\Images\logo.png" />
+    <Content Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Support\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Monochrome.ps" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+      @echo ------ Copy xaml files to ArcSDKWeb  -------
+      cd "$(ProjectDir)"
+      for /R "$(ProjectDir)" %25%25I in (*.xaml) do (xcopy %25%25I  "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\"  /C/I/R/Y)
+      for /R "$(ProjectDir)" %25%25I in (*.xaml.cs) do (xcopy %25%25I  "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\"  /C/I/R/Y)
+      @echo ------ Delete xaml files copied from ArcSDK root folder  -------
+      for %25%25I in (*.xaml) do (del "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\%25%25~nI%25%25~xI")
+      for %25%25I in (*.xaml.cs) do (del "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\%25%25~nI%25%25~xI")
+      @echo ------ Rename xaml.cs to xaml.cs.txt files in ArcSDKWeb  -------
+      for /R "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\" %25%25I in (*.xaml.cs.txt) do (del "%25%25I")
+      for /R "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\" %25%25I in (*.xaml.cs) do (rename "%25%25I"  "%25%25~nI%25%25~xI.txt")
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+      @echo ------ Copy xaml files to ArcSDKWeb  -------
+      cd "$(ProjectDir)"
+      for /R "$(ProjectDir)" %25%25I in (*.xaml) do (xcopy "%25%25I"  "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\"  /C/I/R/Y)
+      for /R "$(ProjectDir)" %25%25I in (*.xaml.cs) do (xcopy "%25%25I"  "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\"  /C/I/R/Y)
+rem      for /R "$(SolutionDir)\VBNet\ArcGISSilverlightSDK\" %25%25I in (*.xaml.vb) do (xcopy "%25%25I"  "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\"  /C/I/R/Y)
+      @echo ------ Delete xaml files copied from ArcSDK root folder  -------
+      for %25%25I in (*.xaml) do (del "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\%25%25~nI%25%25~xI")
+      for %25%25I in (*.xaml.cs) do (del "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\%25%25~nI%25%25~xI")
+      @echo ------ Rename xaml.cs to xaml.cs.txt files in ArcSDKWeb  -------
+      for /R "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\" %25%25I in (*.xaml.cs.txt) do (del "%25%25I")
+      for /R "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\" %25%25I in (*.xaml.cs) do (rename "%25%25I"  "%25%25~nI%25%25~xI.txt")
+      for /R "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source\" %25%25I in (*.xaml.vb.txt) do (del "%25%25I")
+      for /R "$(SolutionDir)\ArcGISSilverlightSDKWeb\Assets\Source" %25%25I in (*.xaml.vb) do (rename "%25%25I"  "%25%25~nI%25%25~xI.txt")
+</PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

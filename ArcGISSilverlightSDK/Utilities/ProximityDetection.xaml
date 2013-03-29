@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="ArcGISSilverlightSDK.ProximityDetection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:esri="http://schemas.esri.com/arcgis/client/2009">
+    <Grid Background="White">
+        <Grid.Resources>
+            <esri:UniqueValueRenderer x:Key="PointsRenderer" Field="Proximity">
+                <esri:UniqueValueRenderer.DefaultSymbol>
+                    <esri:SimpleMarkerSymbol Color="Green" Size="8" Style="Circle" />
+                </esri:UniqueValueRenderer.DefaultSymbol>
+                <esri:UniqueValueInfo Value="Y" Label="Proximity" >
+                    <esri:UniqueValueInfo.Symbol>
+                        <esri:SimpleMarkerSymbol Color="Red" Size="8" Style="Circle" />
+                    </esri:UniqueValueInfo.Symbol>
+                </esri:UniqueValueInfo>
+            </esri:UniqueValueRenderer>
+            <esri:UniqueValueRenderer x:Key="BuffersRenderer" Field="Proximity">
+                <esri:UniqueValueRenderer.DefaultSymbol>
+                    <esri:SimpleFillSymbol Fill="#5000FF00" BorderBrush="Green" BorderThickness="1"/>
+                </esri:UniqueValueRenderer.DefaultSymbol>
+                <esri:UniqueValueInfo Value="Y" Label="Proximity" >
+                    <esri:UniqueValueInfo.Symbol>
+                        <esri:SimpleFillSymbol Fill="#50FF0000" BorderBrush="Red" BorderThickness="1" />
+                    </esri:UniqueValueInfo.Symbol>
+                </esri:UniqueValueInfo>
+            </esri:UniqueValueRenderer>
+        </Grid.Resources>
+
+        <esri:Map x:Name="MyMap" Extent="-130,10,-70,60" WrapAround="True">
+            <esri:ArcGISTiledMapServiceLayer ID="StreetMapLayer"
+                Url="http://services.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer"/>
+                                             <!--Url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>-->
+                <esri:GraphicsLayer ID="BufferResult" Renderer="{StaticResource BuffersRenderer}" Opacity="0.7"/>
+            <esri:GraphicsLayer ID="BufferResult2" Renderer="{StaticResource BuffersRenderer}" Opacity="0.7"/>
+            <esri:GraphicsLayer ID="MyGraphicsLayer" Renderer="{StaticResource PointsRenderer}" />
+        </esri:Map>
+
+        <Border Background="#DD919191" BorderThickness="1" CornerRadius="5"
+            HorizontalAlignment="Right" VerticalAlignment="Top"
+            Margin="10" BorderBrush="Black">
+            <Border.Effect>
+                <DropShadowEffect/>
+            </Border.Effect>
+            <Grid Margin="10" Background="White">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Radius : " VerticalAlignment="Center"/>
+                        <Slider Minimum="5000" Maximum="500000" Value="{Binding Distance, Mode=TwoWay}" Width="130" ToolTipService.ToolTip="{Binding Value, RelativeSource={RelativeSource Self}}" />
+                        <Button Margin="5" Click="GenerateRandomPoints"
+                                ToolTipService.ToolTip="Generate new random points" Content="Add Points"/>
+                        <Button Margin="5" Click="ClearPoints"
+                                ToolTipService.ToolTip="Clear points" Content="Clear Points"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Maptip-->
+        <Canvas HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <esri:MapTip x:Name="MapTipPoints" GraphicsLayer="{Binding ElementName=MyMap, Path=Layers[MyGraphicsLayer]}"
+                         BorderBrush="#99000000" 
+                BorderThickness="1" Title="{Binding [ID]}" VerticalOffset="10" 
+                HorizontalOffset="10" Background="#DDFFFFFF" />
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <esri:MapTip x:Name="MapTipBuffers"  GraphicsLayer="{Binding ElementName=MyMap, Path=Layers[BufferResult]}"
+                         BorderBrush="#99000000" 
+                BorderThickness="1" Title="{Binding [ID]}" VerticalOffset="10" 
+                HorizontalOffset="10" Background="#DDFFFFFF" />
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <esri:MapTip x:Name="MapTipBuffers2"  GraphicsLayer="{Binding ElementName=MyMap, Path=Layers[BufferResult2]}"
+                         BorderBrush="#99000000" 
+                BorderThickness="1" Title="{Binding [ID]}" VerticalOffset="10" 
+                HorizontalOffset="10" Background="#DDFFFFFF" />
+        </Canvas>
+
+    </Grid>
+</UserControl>

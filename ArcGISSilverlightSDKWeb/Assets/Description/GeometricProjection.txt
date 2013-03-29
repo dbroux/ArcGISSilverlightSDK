@@ -1,0 +1,2 @@
+This sample demonstrates how to project a point on the closest geometry.
+Calculations are done at the client side by a background task in order to keep the UI responsive.

@@ -1,0 +1,7 @@
+﻿This sample demonstrates how to customize the legend control in order to turn on/off the visibility of all sublayers when a parent is checked on/off. 
+
+When a parent is checked on/off, there are 2 steps:
+   - set recursively the visibility of sub layers (going down through the hierarchy of layer/sublayers)
+   - set the status of the checkboxes (going up through the hierarchy of layer/sublayers). If a layer has some sublayers visible and some sublayers invisible, we use the checkbox third state.
+
+To store the status of the checkboxes, we set the LayerItemViewModel.Tag property that is binded to the checkboxes in xaml. 

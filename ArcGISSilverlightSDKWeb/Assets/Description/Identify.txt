@@ -1,0 +1,8 @@
+This sample demonstrates performing identify operations. To use the sample, simply click anywhere on the Water Network to identify features. The results will be shown in the drop-down menu and DataGrid in the upper right corner of the application.
+View the data for different results by selecting them from the drop-down menu or by hovering one of the identified graphics.
+
+In the code-behind, the sample uses a Draw object to get the click geometry and an IdentifyTask to perform the identify operation. The tasks identify parameters specify to query all the visible layers in the target map service, which enables the returning of results from multiple layers.
+One additional option allows to identify only the layers that are visible for the current scale.
+
+It's worth noting that to identify all layers that are visible at client side, we need to set the IdentifyParameters LayerIds property with the currently visible sublayers. Once the LayerIds is set, the layerOption ('visible' or 'all') allows to identify either only layers visible at current scale or all layers. 
+

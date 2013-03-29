@@ -1,0 +1,5 @@
+﻿For this sample, the Legend Control is styled in order to use an Accordion.
+That is done by modifying the Template Property and by replacing the default TreeView by an Accordion.
+
+Note that to get this result without the TreeView, the Accordion items are binded to the Legend LayerItems that returns all top level layers whatever the LayerItemsMode.
+Then the second level is an ItemsControl binded to LayerItemsSource with LayerItemsMode set to Flat so only the last level of LayerItems is returned.

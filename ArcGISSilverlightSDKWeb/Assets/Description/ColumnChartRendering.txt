@@ -1,0 +1,9 @@
+This sample shows how to render a graphics layer with a column chart symbol.
+As the point layer is created from a polygon map service, this sample shows also how to create centroid points from polygons.
+
+The ChartMarkerSymbol that subclasses the markerSymbol is defined by code to manage a Fields Dependency Property containing the fields to display in the chart.
+Then the symbology is defined in XAML by a renderer using that ChartMarkerSymbol.
+
+The CentroidsHelper is the reusable class that creates asynchronously the points from polygons (using a geometry service if needed).
+
+Note : This sample is adapted from the original 'Pie Chart Symbol' sample : http://www.arcgis.com/home/item.html?id=b135d66549364786b381e85451742d56

@@ -1,0 +1,2 @@
+This sample demonstrates how to detect at client side the proximity between points.
+Calculations are done at the client side by a background task in order to keep the UI responsive.

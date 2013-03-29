@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="ArcGISSilverlightSDK.PanWithAnimation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:esri="http://schemas.esri.com/arcgis/client/2009">
+    <Grid x:Name="LayoutRoot">
+
+        <esri:Map x:Name="MyMap" WrapAround="True" Extent="230000,6220000,290000,6280000">
+            <esri:FeatureLayer Url="http://sampleserver6.arcgisonline.com/arcgis/rest/services/WorldTimeZones/MapServer/2" MaxAllowableOffset="20000" MinimumResolution="1000"/>
+            <esri:ArcGISTiledMapServiceLayer Url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>
+            
+        </esri:Map>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20" >
+            <Button Content="Pan To Copenhagen" Command="{Binding }" CommandParameter="1400000,7500000.8" Margin="5"  Opacity="0.9"/>
+            <Button Content="Pan To Paris" Command="{Binding }" CommandParameter="260000,6250000.8" Margin="5"  Opacity="0.9"/>
+            <Button Content="Pan To Port au Prince" Command="{Binding}" CommandParameter="-8050000,2104000" Margin="5"  Opacity="0.9"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

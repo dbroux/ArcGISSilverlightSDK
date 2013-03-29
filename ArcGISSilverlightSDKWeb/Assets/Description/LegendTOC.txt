@@ -1,0 +1,5 @@
+﻿This sample demonstrates the Legend control. The Legend control displays the symbology of specified Layers with text explanations of what the symbols mean in a Map an organized in a tree view hierarchy. The specific Layers that are displayed in the Legend control are controlled by what is specified in the LayersIDs Property.
+
+For this sample, the behavior of the Legend control is transformed into an interactive Table of Contents (TOC) where the user can turn on/off as well as adjust the opacity of the individual Layer’s symbology. Adjusting the Legend control’s behavior is done by modifying the MapLayerTemplate and LayerTemplate Properties with a user defined DataTemplate. Creating a custom DataTemplate provides powerful flexibility in ‘skinning’ the Legend control to meet various needs.
+
+The swatches can be turned on/off just by changing the LegendItemTemplate.

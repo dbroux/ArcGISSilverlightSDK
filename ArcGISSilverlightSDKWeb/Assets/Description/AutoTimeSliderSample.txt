@@ -1,0 +1,1 @@
+﻿This sample demonstrates how to subclass the TimeSlider to automate its visibility and it's time range depending on the current layers visibility.

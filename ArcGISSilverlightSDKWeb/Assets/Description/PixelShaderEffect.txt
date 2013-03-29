@@ -1,0 +1,2 @@
+This sample shows how to create a pixel shaders effect and how to associate it to the map.
+To make it working in your own project you need to include Monochrome.ps as resource in your project (available under ./Assets/PixelShaders/Monochrome.ps)

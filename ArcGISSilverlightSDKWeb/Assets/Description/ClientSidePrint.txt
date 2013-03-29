@@ -1,0 +1,20 @@
+This sample demonstrates how to print a map at client side by using the Silverlight printing capabilities based on the PrintDocument
+class.
+The PrintDocument object encapsulates all the information needed to print an UI Element exactly as it appears on screen.
+
+The problem here is that we don't need to print the map as it's displayed on screen. We generally need to add to the map others UI elements such as Border, Header, Footer, ScaleLine, Attribution... in order to get the expected page to print.
+
+The MapPrinter control, provided in this sample, manages the Silverlight print process of its own content.
+By styling the MapPrinter control, we are able to define the layout of the page to print.
+
+Nevertheless there are 2 difficulties to overcome:
+   1) the map in the main window needs to be cloned in order to be displayed in the MapPrinter control
+   2) before printing the map, we need to be sure that all layers are loaded
+
+The point 1 is solved by the CloneMap class and its Map attached propertie that allows to define the map to clone in XAML.
+The point 2) is fixed by the MapLoader class that handles the Map.Progress event and fires a MapLoaded event when the map is ready to be printed.
+
+It's worth noting that the real print area size is only known after the user has selected the printer and its properties such as the paper size and the orientation. 
+As a consequence, the map extent may change during the print process and the MapLoader is useful in order to send the page to print only when the map is fully loaded.
+
+Four print templates are provided in this sample but this can easily be extented by adding new templates in the 'PrintTemplates' resource dictionary.

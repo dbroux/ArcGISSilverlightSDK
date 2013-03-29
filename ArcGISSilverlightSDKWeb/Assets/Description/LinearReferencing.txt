@@ -1,0 +1,1 @@
+This sample demonstrates how to implement Linear Referencing functions allowing to get a linear position along a line or to extract the geometry between two linear positions.

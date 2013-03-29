@@ -1,0 +1,2 @@
+﻿For this sample, the Legend Control is styled in order to use a WrapPanel.
+That is done by modifying the Template Property and by replacing the default TreeView by a ListBox that leverages a WrapPanel.

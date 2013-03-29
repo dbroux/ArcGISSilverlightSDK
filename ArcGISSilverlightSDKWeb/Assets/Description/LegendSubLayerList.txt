@@ -1,0 +1,2 @@
+﻿For this sample, the behavior of the Legend control is transformed into a list with sublayers that the user can turn on/off.
+Adjusting the Legend control’s behavior is done by modifying the Template Property in order to use a ListBox instead of a tree view.

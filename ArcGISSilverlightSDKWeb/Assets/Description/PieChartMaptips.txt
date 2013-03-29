@@ -1,0 +1,5 @@
+This sample shows how to set a chart as maptip of a feature layer.
+
+The ItemsSourceConverter allows to convert the attributes dictionary to a list of Key-Value to display in the chart.
+
+Note : This sample is adapted from the original 'Pie Chart Symbol' sample : http://www.arcgis.com/home/item.html?id=b135d66549364786b381e85451742d56
